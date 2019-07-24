@@ -93,4 +93,8 @@ DWORD64 FindSignature(DWORD64 start, DWORD64 size, const char *sig, const char *
     return NULL;
 }
 
+DWORD64 FindSignature(const char *sig, const char *mask) {
+    return FindSignature(TargetModule.dwBase, TargetModule.dwSize, sig, mask);
+}
+
 #endif //TESTV_MEMORY_H
