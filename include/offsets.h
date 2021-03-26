@@ -8,7 +8,7 @@ using std::vector;
 
 vector<unsigned int> OffsetsAFK = {0x2C0};
 // player -> player info -> wanted level
-vector<unsigned int> OffsetsWantedLevel = {0x8, 0x10C8, 0x868};
+vector<unsigned int> OffsetsWantedLevel = {0x8, 0x10C8, 0x888};
 vector<unsigned int> OffsetsGodMode = {0x8, 0x189};
 vector<unsigned int> OffsetsHealth = {0x8, 0x280};
 vector<unsigned int> OffsetsRagdoll = {0x8, 0x10B8};
