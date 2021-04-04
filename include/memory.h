@@ -60,9 +60,8 @@ var ReadMemory(DWORD64 Address) {
 }
 
 BOOL MemoryCompare(const BYTE *bData, const BYTE *bMask, const char *szMask) {
-    for (int k = 0; *szMask; ++szMask, ++bData, ++bMask, ++k) {
-        if (static_cast<char>((k ^ 1) ? (~(*szMask)) : ((*szMask) ^ 0xDA)) == 'x'
-            && *bData != static_cast<uint8_t>((k ^ 1) ? ((*bMask) ^ 0xDA) : (~(*bMask)))) {
+    for (; *szMask; ++szMask, ++bData, ++bMask) {
+        if (*szMask == 'x' && *bData != *bMask) {
             return false;
         }
     }
