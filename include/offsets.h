@@ -14,7 +14,7 @@ vector<unsigned int> OffsetsHealth = {0x8, 0x280};
 vector<unsigned int> OffsetsRagdoll = {0x8, 0x10B8};
 vector<unsigned int> OffsetPlayerNav = {0x8, 0x30, 0x50};
 vector<unsigned int> OffsetPlayerPos = {0x8, 0x90};
-vector<unsigned int> OffsetIsInVehicle = {0x8, 0x1477};
+vector<unsigned int> OffsetIsInVehicle = {0x8, 0x14DC + 3};
 // player -> vehicle -> pos -> pos
 vector<unsigned int> OffsetCarPos = {0x8, 0xD30, 0x30, 0x50};
 // player -> vehicle -> pos -> nav
